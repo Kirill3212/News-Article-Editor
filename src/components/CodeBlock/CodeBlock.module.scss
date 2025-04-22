@@ -1,0 +1,16 @@
+.code-block {
+  @include block-base;
+
+  textarea {
+    @include input-base;
+    min-height: 120px;
+    font-family: $font-mono;
+    background: #fff;
+    resize: vertical;
+  }
+
+  button {
+    @include button-base();
+    align-self: flex-end;
+  }
+}

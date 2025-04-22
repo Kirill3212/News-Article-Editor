@@ -1,0 +1,75 @@
+.article-preview {
+  @include block-base;
+  max-width: 800px;
+  margin: 2rem auto;
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: $text-main;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .preview-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: $text-main;
+    margin-bottom: 1.2rem;
+    p { margin: 0.5rem 0; }
+    strong { font-weight: 600; }
+    em { font-style: italic; }
+    h2, h3, h4, h5, h6 {
+      margin: 1.2rem 0 0.7rem 0;
+      font-weight: 600;
+    }
+  }
+
+  .preview-image {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+    }
+  }
+
+  .preview-file {
+    margin: 1rem 0;
+    a {
+      @include button-base($bg: $gray-bg, $bg-hover: lighten($primary, 40%));
+      color: $primary;
+      background: $gray-bg;
+      text-decoration: none;
+      font-size: 1rem;
+      &:hover { color: $primary-dark; }
+    }
+  }
+
+  .preview-code {
+    margin: 1.2rem 0;
+    pre, code {
+      background: #1e293b;
+      color: #f1f5f9;
+      border-radius: 6px;
+      padding: 1rem;
+      font-size: 1rem;
+      font-family: $font-mono;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+  }
+
+  .preview-quote {
+    border-left: 4px solid $primary;
+    background: lighten($primary, 48%);
+    color: $text-secondary;
+    font-style: italic;
+    margin: 1.5rem 0;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 1.1rem;
+  }
+}

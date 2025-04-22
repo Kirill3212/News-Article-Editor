@@ -1,0 +1,67 @@
+// Color palette
+$primary: #2563eb;
+$primary-dark: #1d4ed8;
+$success: #10b981;
+$success-dark: #059669;
+$danger: #ef4444;
+$gray-bg: #f8fafc;
+$gray-border: #cbd5e1;
+$text-main: #222;
+$text-secondary: #374151;
+
+// Border radius and shadow
+$radius: 8px;
+$shadow: 0 2px 8px rgba(30,41,59,0.06);
+
+// Typography
+$font-main: 'Inter', Arial, sans-serif;
+$font-mono: 'Fira Mono', 'Consolas', monospace;
+
+// Mixins
+@mixin input-base {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid $gray-border;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: $font-main;
+  background: #fff;
+  color: $text-main;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  &:focus {
+    border-color: $primary;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($primary, 0.12);
+    background: lighten($primary, 48%);
+  }
+}
+
+@mixin button-base($bg: $primary, $bg-hover: $primary-dark) {
+  display: inline-block;
+  padding: 0.45rem 1.2rem;
+  background: $bg;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba($bg, 0.08);
+  &:hover, &:focus {
+    background: $bg-hover;
+    box-shadow: 0 2px 8px rgba($bg, 0.15);
+  }
+  user-select: none;
+}
+
+@mixin block-base {
+  background: $gray-bg;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}

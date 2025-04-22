@@ -1,0 +1,14 @@
+.image-uploader {
+  @include block-base;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+
+  input[type="file"] {
+    display: none;
+  }
+
+  span {
+    @include button-base($bg: $primary, $bg-hover: $primary-dark);
+  }
+}

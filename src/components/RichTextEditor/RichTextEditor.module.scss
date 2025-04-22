@@ -1,0 +1,17 @@
+.rich-text-editor {
+  @include block-base;
+
+  .ql-toolbar {
+    border-radius: 6px 6px 0 0;
+  }
+  .ql-container {
+    border-radius: 0 0 6px 6px;
+    min-height: 120px;
+    font-size: 1.08rem;
+  }
+
+  button {
+    @include button-base();
+    align-self: flex-end;
+  }
+}

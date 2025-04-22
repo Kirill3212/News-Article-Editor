@@ -1,0 +1,18 @@
+.quote-block {
+  @include block-base;
+  border-left: 4px solid $primary;
+  border-radius: 0 $radius $radius 0;
+
+  textarea {
+    @include input-base;
+    min-height: 48px;
+    font-style: italic;
+    background: #fff;
+    resize: vertical;
+  }
+
+  button {
+    @include button-base();
+    align-self: flex-end;
+  }
+}
