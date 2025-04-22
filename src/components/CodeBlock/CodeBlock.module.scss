@@ -1,16 +1,18 @@
+@use '../../styles/ui';
+
 .code-block {
-  @include block-base;
+  @include ui.block-base;
 
   textarea {
-    @include input-base;
+    @include ui.input-base;
     min-height: 120px;
-    font-family: $font-mono;
+    font-family: ui.$font-mono;
     background: #fff;
     resize: vertical;
   }
 
   button {
-    @include button-base();
+    @include ui.button-base();
     align-self: flex-end;
   }
 }

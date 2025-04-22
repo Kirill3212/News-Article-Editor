@@ -1,5 +1,7 @@
+@use '../../styles/ui';
+
 .image-uploader {
-  @include block-base;
+  @include ui.block-base;
   flex-direction: row;
   align-items: center;
   gap: 0.75rem;
@@ -9,6 +11,6 @@
   }
 
   span {
-    @include button-base($bg: $primary, $bg-hover: $primary-dark);
+    @include ui.button-base($bg: ui.$primary, $bg-hover: ui.$primary-dark);
   }
 }

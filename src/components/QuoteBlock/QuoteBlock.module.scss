@@ -1,10 +1,12 @@
+@use '../../styles/ui';
+
 .quote-block {
-  @include block-base;
-  border-left: 4px solid $primary;
-  border-radius: 0 $radius $radius 0;
+  @include ui.block-base;
+  border-left: 4px solid ui.$primary;
+  border-radius: 0 ui.$radius ui.$radius 0;
 
   textarea {
-    @include input-base;
+    @include ui.input-base;
     min-height: 48px;
     font-style: italic;
     background: #fff;
@@ -12,7 +14,7 @@
   }
 
   button {
-    @include button-base();
+    @include ui.button-base();
     align-self: flex-end;
   }
 }

@@ -1,11 +1,13 @@
+@use '../../styles/ui';
+
 .article-editor {
-  @include block-base;
+  @include ui.block-base;
   max-width: 800px;
   margin: 2rem auto;
-  border: 1px solid $gray-border;
+  border: 1px solid ui.$gray-border;
 
   input[type="text"] {
-    @include input-base;
+    @include ui.input-base;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     width: 100%;
@@ -14,7 +16,7 @@
   }
 
   textarea {
-    @include input-base;
+    @include ui.input-base;
     font-size: 1rem;
     margin-bottom: 1rem;
     width: 100%;
@@ -25,7 +27,7 @@
   }
 
   button {
-    @include button-base();
+    @include ui.button-base();
     margin: 0.5rem 0.5rem 1rem 0;
   }
 }

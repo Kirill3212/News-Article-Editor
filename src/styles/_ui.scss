@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Color palette
 $primary: #2563eb;
 $primary-dark: #1d4ed8;
@@ -32,7 +34,7 @@ $font-mono: 'Fira Mono', 'Consolas', monospace;
     border-color: $primary;
     outline: none;
     box-shadow: 0 0 0 2px rgba($primary, 0.12);
-    background: lighten($primary, 48%);
+    background: color.adjust($primary, $lightness: 48%);
   }
 }
 

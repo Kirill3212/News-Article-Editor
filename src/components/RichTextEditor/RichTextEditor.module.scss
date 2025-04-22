@@ -1,5 +1,7 @@
+@use '../../styles/ui';
+
 .rich-text-editor {
-  @include block-base;
+  @include ui.block-base;
 
   .ql-toolbar {
     border-radius: 6px 6px 0 0;
@@ -11,7 +13,7 @@
   }
 
   button {
-    @include button-base();
+    @include ui.button-base();
     align-self: flex-end;
   }
 }
